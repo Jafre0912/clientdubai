@@ -1,0 +1,574 @@
+/* --- General Home Styles --- */
+.home-container {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* --- Hero Carousel Section --- */
+.carousel-section {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    /* Adjust height as needed, or use aspect-ratio */
+    max-height: 450px;
+    overflow: hidden;
+    background-color: #eee;
+    /* Fallback */
+}
+
+.carousel-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carousel-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures image covers the slide area */
+}
+
+/* Carousel Arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-arrow.left-arrow {
+    left: 1rem;
+}
+
+.carousel-arrow.right-arrow {
+    right: 1rem;
+}
+
+.carousel-arrow svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Carousel Dots */
+.carousel-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-dot:hover,
+.carousel-dot.active {
+    background-color: white;
+}
+
+
+/* --- Three-Column Info Section --- */
+.info-section-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+.info-column {
+    padding: 2rem;
+    color: white;
+}
+
+.info-column h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.info-column ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.info-column li {
+    margin-bottom: 0.5rem;
+}
+
+.info-column.green {
+    background-color: #10B981;
+}
+
+.info-column.orange {
+    background-color: #F59E0B;
+}
+
+.info-column.purple {
+    background-color: #6D28D9;
+}
+
+.apply-button {
+    display: inline-block;
+    background-color: #fff;
+    color: #6D28D9;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.apply-button:hover {
+    background-color: #eee;
+}
+
+/* --- Welcome Section --- */
+.welcome-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.welcome-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #F59E0B;
+    /* Orange */
+    margin-bottom: 1rem;
+}
+
+.welcome-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.warning-content {
+    background-color: #F3F4F6;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.language-tabs {
+    margin-bottom: 1rem;
+}
+
+.tab {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    transition: all 0.3s;
+}
+
+.tab.active {
+    background-color: #10B981;
+    color: white;
+    border-color: #10B981;
+}
+
+.tab:not(.active):hover {
+    background-color: #e5e5e5;
+}
+
+.warning-content p {
+    color: #444;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* --- Stats Section --- */
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 cols on mobile */
+    gap: 1rem;
+    background-color: #fff;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 1rem;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #10B981;
+    /* Green */
+}
+
+.stat-label {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+/* --- CSP Info Cards Section --- */
+.csp-info-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    background-color: #F3F4F6;
+    padding: 3rem 1.5rem;
+}
+
+.csp-info-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.csp-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.csp-info-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.csp-info-card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.csp-apply-link {
+    color: #10B981;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: color 0.3s;
+}
+
+.csp-apply-link:hover {
+    color: #0d946a;
+}
+
+.apply-arrow {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.3s;
+}
+
+.csp-apply-link:hover .apply-arrow {
+    transform: translateX(4px);
+}
+
+/* --- Apply Banner --- */
+.apply-banner {
+    background-color: #10B981;
+    color: white;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.apply-banner h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.apply-now-button {
+    background-color: #fff;
+    color: #10B981;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    /* Pill shape */
+    transition: all 0.3s;
+}
+
+.apply-now-button:hover {
+    background-color: #eee;
+    transform: scale(1.05);
+}
+
+/* --- News Section --- */
+.news-section {
+    padding: 3rem 1.5rem;
+    background-color: #1F2937;
+    /* Dark background */
+    color: #D1D5DB;
+}
+
+.news-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.news-marquee {
+    background-color: #374151;
+    border-radius: 8px;
+    padding: 1rem;
+    height: 200px;
+    /* Fixed height */
+    overflow-y: auto;
+    /* Scroll for overflow */
+}
+
+/* You can add a CSS animation here for a real marquee effect */
+.news-marquee ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-marquee li {
+    padding: 0.75rem 0.5rem;
+    border-bottom: 1px solid #4B5563;
+}
+
+.news-marquee li:last-child {
+    border-bottom: none;
+}
+
+.news-marquee li strong {
+    color: #F59E0B;
+    /* Orange */
+}
+
+/* --- Reference Bank Section --- */
+.reference-bank-section {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.reference-bank-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.bank-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 cols mobile */
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bank-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+}
+
+.bank-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bank-card img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    margin: 0 auto 1rem auto;
+    object-fit: contain;
+}
+
+.apply-csp-button {
+    display: inline-block;
+    background-color: #10B981;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+.apply-csp-button:hover {
+    background-color: #0d946a;
+}
+
+/* --- Our Services Section --- */
+.our-services-section {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background-color: #F9FAFB;
+}
+
+.our-services-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* 1 col mobile */
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.service-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    color: #10B981;
+    margin: 0 auto 1rem auto;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.service-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* --- Media Queries for Responsive Layout --- */
+
+@media (min-width: 640px) {
+
+    /* sm */
+    .bank-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 cols tablet */
+    }
+}
+
+@media (min-width: 768px) {
+
+    /* md */
+    .info-section-container {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 cols desktop */
+    }
+
+    .welcome-section {
+        grid-template-columns: 2fr 1fr;
+        /* 2:1 ratio desktop */
+        padding: 4rem 2rem;
+    }
+
+    .stats-section {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 cols desktop */
+    }
+
+    .csp-info-section {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 cols desktop */
+        padding: 4rem 2rem;
+    }
+
+    .apply-banner {
+        flex-direction: row;
+        /* Row layout on desktop */
+        justify-content: space-between;
+        text-align: left;
+        padding: 3rem 2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 cols desktop */
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* lg */
+    .services-grid {
+        grid-template-columns: repeat(5, 1fr);
+        /* 5 cols desktop */
+    }
+
+    .bank-grid {
+        grid-template-columns: repeat(6, 1fr);
+        /* 6 cols desktop */
+    }
+}

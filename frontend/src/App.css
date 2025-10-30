@@ -1,0 +1,17 @@
+/* You can add global styles here that are not covered by Tailwind */
+/* For example: */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f4f4; /* A light gray background */
+}
+
+main {
+  /* This ensures your main content area doesn't get hidden behind a fixed header if you add one */
+  /* padding-top: 60px; */ /* Example */
+  min-height: 60vh; /* Ensures footer doesn't jump up on empty pages */
+}

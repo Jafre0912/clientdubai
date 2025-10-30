@@ -1,0 +1,294 @@
+/* --- Global Variables --- */
+:root {
+  --primary-color: #0D47A1; /* Deep Blue */
+  --secondary-color: #F59E0B; /* Orange */
+  --text-dark: #212121; /* Darker than #333 */
+  --text-light: #fff;
+  --text-muted: #5f6368; /* Google's muted text color */
+  --border-color: #dadce0; /* Google's border color */
+  --bg-light: #f8f9fa; /* Google's light bg */
+  --bg-white: #ffffff;
+  --success-color: #10B981; /* Green */
+  --font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.contact-register-page {
+  width: 100%;
+  background-color: var(--bg-white);
+  font-family: var(--font-family);
+  color: var(--text-dark);
+}
+
+.cr-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Mobile first */
+}
+
+/* --- Sidebar --- */
+.cr-sidebar {
+  background-color: var(--bg-light);
+  border-right: 1px solid var(--border-color);
+  padding: 2rem 1.5rem;
+}
+
+.cr-sidebar h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 1.5rem 0.5rem;
+}
+
+.cr-sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cr-sidebar-nav li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.cr-sidebar-nav li a:hover {
+  background-color: #e8f0fe; /* Google's hover blue */
+  color: var(--primary-color);
+}
+
+.cr-sidebar-links {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+.cr-sidebar-links p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin: 0 0 1rem 0.5rem;
+}
+.cr-sidebar-links a {
+  display: block;
+  padding: 0.5rem 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+/* --- Main Content --- */
+.cr-main-content {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  min-width: 0; /* Prevents flex overflow */
+}
+
+.cr-header {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+.cr-header h1 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin: 0 0 0.5rem 0;
+}
+.cr-header p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.cr-section {
+  margin-bottom: 3.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 3rem;
+}
+.cr-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.cr-section-title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+}
+
+/* --- Card Grids --- */
+.cr-card-grid, .cr-card-grid-small {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+.cr-card-grid-small {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.cr-card {
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+.cr-card strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin: 1rem 0 0.25rem 0;
+}
+.cr-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.cr-card-small {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.cr-card-small p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin: 0;
+}
+.cr-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+.cr-card .cr-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 auto;
+}
+
+/* --- Form --- */
+.cr-form {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile */
+  gap: 1.5rem;
+}
+
+.cr-form-group {
+  display: flex;
+  flex-direction: column;
+}
+.cr-form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+.cr-form-group input[type="text"],
+.cr-form-group input[type="email"],
+.cr-form-group input[type="tel"],
+.cr-form-group input[type="date"] {
+  font-size: 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+.cr-form-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px #d2e3fc; /* Google's focus ring */
+}
+
+.cr-file-input {
+  font-size: 0.9rem;
+  padding: 0.6rem 0;
+}
+
+.radio-group label {
+  display: inline-block;
+  margin-right: 1.5rem;
+  font-size: 1rem;
+  color: var(--text-dark);
+  font-weight: 400;
+}
+.radio-group input[type="radio"] {
+  margin-right: 0.5rem;
+  accent-color: var(--primary-color);
+}
+.radio-group > div {
+  padding-top: 0.5rem;
+}
+
+.cr-submit-btn {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.cr-submit-btn:hover {
+  background-color: #0b3a85; /* Darker blue */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Contact Info --- */
+.cr-contact-info div {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+}
+.cr-contact-info strong {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.cr-contact-info p {
+  margin: 0.25rem 0;
+}
+
+
+/* --- Desktop Layout --- */
+@media (min-width: 768px) {
+  .cr-form {
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+  }
+  .span-2 {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cr-container {
+    flex-direction: row; /* Row layout for desktop */
+  }
+  .cr-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    position: sticky; /* Sticky sidebar */
+    top: 0; /* Stick to top (adjust if you have sticky header) */
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .cr-main-content {
+    padding: 2.5rem 4rem;
+  }
+}
+

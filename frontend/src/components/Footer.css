@@ -1,0 +1,149 @@
+/* --- Main Footer Styles --- */
+#main-footer {
+    background-color: #1F2937;
+    /* Based on old bg-gray-800 */
+    color: #D1D5DB;
+    /* Based on old text-gray-300 */
+    padding-top: 2rem;
+}
+
+.footer-content-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    /* Based on old p-8 */
+    display: grid;
+    grid-template-columns: 1fr;
+    /* 1 column mobile */
+    gap: 2rem;
+    /* Based on old gap-8 */
+}
+
+.footer-column {
+    /* This is a grid item container */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-heading {
+    font-size: 1.25rem;
+    /* Based on old text-xl */
+    font-weight: 600;
+    /* Based on old font-semibold */
+    color: #fff;
+    /* Based on old text-white */
+    margin-bottom: 1rem;
+    /* Based on old mb-4 */
+}
+
+.footer-subheading {
+    color: #fff;
+    /* Based on old text-white */
+    font-weight: 700;
+    /* Based on old font-bold */
+    margin-bottom: 0.5rem;
+    /* Based on old mb-2 */
+}
+
+.footer-link-flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    /* Based on old mb-3 */
+    gap: 0.5rem;
+    /* Gap between icon and text */
+}
+
+.footer-link-flex.align-start {
+    align-items: flex-start;
+}
+
+.footer-link-flex p {
+    margin: 0;
+    flex: 1;
+}
+
+/* --- Corrected Footer Icons Size --- */
+.footer-icon {
+    height: 1rem;
+    /* Smaller, but still visible (from 1.25rem) */
+    width: 1rem;
+    /* Smaller, but still visible (from 1.25rem) */
+    flex-shrink: 0;
+}
+
+.footer-icon.align-start {
+    margin-top: 3px;
+    /* Aligns icon with first line of text */
+}
+
+
+.footer-link {
+    color: #D1D5DB;
+    /* Based on old text-gray-300 */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #FB923C;
+    /* Based on old hover:text-orange-400 */
+}
+
+.footer-link-apply {
+    color: #FB923C;
+    /* Based on old text-orange-400 */
+    text-decoration: none;
+    font-weight: 600;
+    /* Based on old font-semibold */
+    display: block;
+    margin: 1rem 0;
+    /* Based on old my-4 */
+    transition: color 0.3s;
+}
+
+.footer-link-apply:hover {
+    color: #fff;
+    /* Based on old hover:text-white */
+}
+
+.footer-small-text {
+    font-size: 0.875rem;
+    /* Based on old text-sm */
+    color: #D1D5DB;
+}
+
+.footer-link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link-list li {
+    margin-bottom: 0.5rem;
+    /* Based on old space-y-2 */
+}
+
+/* --- Copyright Bar --- */
+.copyright-bar {
+    background-color: #000;
+    /* Based on old bg-black */
+    color: #6B7280;
+    /* Based on old text-gray-500 */
+    text-align: center;
+    padding: 1rem;
+    /* Based on old p-4 */
+    font-size: 0.875rem;
+    /* Based on old text-sm */
+}
+
+/* --- Media Query for Desktop (This is the ROW layout) --- */
+@media (min-width: 768px) {
+
+    /* md breakpoint */
+    .footer-content-container {
+        /* This makes the 3 columns appear in a ROW */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

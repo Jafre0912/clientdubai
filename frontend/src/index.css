@@ -1,0 +1,11 @@
+/* These are the Tailwind CSS directives */
+/* Your React app will use these to build the final stylesheet */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add custom base styles here if needed */
+body {
+  @apply text-gray-800;
+}

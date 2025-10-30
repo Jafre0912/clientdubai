@@ -1,0 +1,297 @@
+/* --- Global Variables (from other pages) --- */
+:root {
+  --primary-color: #0D47A1; /* Deep Blue */
+  --secondary-color: #F59E0B; /* Orange */
+  --text-dark: #333;
+  --text-light: #fff;
+  --text-muted: #666;
+  --border-color: #e5e7eb;
+  --bg-light: #f9fafb;
+  --bg-white: #ffffff;
+}
+
+.blog-page {
+  width: 100%;
+  background-color: var(--bg-light);
+}
+
+/* --- Hero Section --- */
+.bl-hero {
+  background: var(--primary-color);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.bl-hero h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.bl-hero p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* --- Main Layout --- */
+.bl-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column; /* Mobile first */
+  gap: 2.5rem;
+}
+
+.bl-main-content {
+  flex: 3; /* Takes 3/4 width on desktop */
+  min-width: 0;
+}
+
+.bl-sidebar {
+  flex: 1; /* Takes 1/4 width on desktop */
+  min-width: 0;
+  position: relative; /* For sticky */
+}
+
+/* --- Blog Post Card --- */
+.bl-post-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  margin-bottom: 2rem;
+  overflow: hidden; /* To contain border-radius */
+}
+
+.bl-post-card header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.bl-post-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.bl-post-title a {
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+}
+
+.bl-post-title a:hover {
+  color: var(--primary-color);
+}
+
+.bl-post-meta {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.bl-post-content {
+  padding: 2rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+}
+
+.bl-post-content p {
+  margin: 0 0 1rem 0;
+}
+.bl-post-content p:last-child {
+  margin-bottom: 0;
+}
+
+.bl-post-content ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.bl-post-content li {
+  margin-bottom: 0.5rem;
+}
+
+.bl-post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--bg-light);
+  border-top: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+
+.bl-post-comments a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.bl-post-share {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.bl-post-share a {
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.bl-post-share a:hover {
+  color: var(--primary-color);
+}
+
+.bl-share-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* --- Pagination --- */
+.bl-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.bl-pagination-link {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.bl-pagination-link:hover,
+.bl-pagination-link.active {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border-color: var(--primary-color);
+}
+
+
+/* --- Sidebar Widget --- */
+.bl-sidebar-widget {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.bl-widget-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+  margin: 0 0 1rem 0;
+}
+
+.bl-widget-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.bl-archive-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bl-archive-list li a {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.bl-archive-list li a:hover {
+  color: var(--primary-color);
+}
+
+.bl-archive-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+.bl-archive-list li.open > a > .bl-archive-icon {
+  transform: rotate(90deg);
+}
+
+.bl-archive-child {
+  list-style: none;
+  padding-left: 1.5rem;
+  margin: 0.25rem 0;
+}
+.bl-archive-child li a {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.bl-sidebar-share-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bl-share-link-block {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-radius: 6px;
+}
+.bl-share-link-block:hover {
+  background-color: var(--bg-light);
+  color: var(--primary-color);
+}
+.bl-share-link-block .bl-share-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.bl-subscribe-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* --- Media Queries --- */
+
+/* Desktop Layout */
+@media (min-width: 900px) {
+  .bl-container {
+    flex-direction: row; /* Row layout */
+  }
+  
+  .bl-sidebar {
+    /* Sticky sidebar */
+    position: sticky;
+    top: 2rem; /* Adjust this value based on your sticky header height */
+    height: calc(100vh - 4rem); /* Full height minus padding */
+    overflow-y: auto; /* Allow sidebar to scroll if it's too tall */
+  }
+}
+

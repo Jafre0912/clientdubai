@@ -1,0 +1,130 @@
+/* --- Global Variables (from other pages) --- */
+:root {
+  --primary-color: #0D47A1; /* Deep Blue */
+  --secondary-color: #F59E0B; /* Orange */
+  --text-dark: #333;
+  --text-light: #fff;
+  --text-muted: #666;
+  --border-color: #e5e7eb;
+  --bg-light: #f9fafb;
+  --success-color: #10B981; /* Green */
+}
+
+.offerings-page {
+  width: 100%;
+  background-color: var(--bg-light);
+}
+
+/* --- Hero Section --- */
+.of-hero {
+  /* Using a subtle gradient */
+  background: linear-gradient(90deg, #f4f8ff 0%, #e6f0ff 100%);
+  padding: 4rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.of-hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.of-hero-content p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text-dark);
+}
+
+/* --- Introduction Section --- */
+.of-intro-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.of-intro-text {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* --- Benefits Grid Section --- */
+.of-benefits-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem 1.5rem;
+}
+
+.of-benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column on mobile */
+  gap: 2rem;
+}
+
+/* --- Benefit Card Styling --- */
+.of-benefit-card {
+  background-color: var(--text-light);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem 2rem;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.of-benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.of-card-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.of-benefit-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+/* --- Benefit List Styling --- */
+.of-benefit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.of-benefit-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.of-benefit-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--success-color);
+  flex-shrink: 0;
+  margin-top: 4px; /* Aligns icon with text */
+}
+
+/* --- Media Queries --- */
+
+/* Desktop (3-column layout) */
+@media (min-width: 900px) {
+  .of-benefits-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
